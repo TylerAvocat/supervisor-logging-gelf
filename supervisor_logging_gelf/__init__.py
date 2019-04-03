@@ -113,7 +113,7 @@ def main():
     sys.stderr.write("Starting with host: %s, port: %d" % (host, port))
     sys.stderr.flush()
 
-    handler = graypy.GELFHandler(host, port)
+    handler = graypy.GELFUDPHandler(host, port)
     level_match = re.compile(level_match_expr)
 
     for event_headers, event_data in supervisor_events(sys.stdin, sys.stdout):
